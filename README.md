@@ -9,6 +9,10 @@
 
 </div>
 
+## Finding the Component
+
+This component can be found under the **CoreAcademy** account on Community Content.
+
 ## Overview
 
 VIP Entrance is a component that restrict users from a certain team from entering.
