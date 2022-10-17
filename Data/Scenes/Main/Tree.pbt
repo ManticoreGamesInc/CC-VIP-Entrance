@@ -60,14 +60,14 @@ Objects {
           String: "VIP Entrance"
         }
         Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
           Name: "Position"
           Vector {
             X: 1000
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
           }
         }
       }

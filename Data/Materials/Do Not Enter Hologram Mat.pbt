@@ -2,7 +2,7 @@ Assets {
   Id: 11486163764575026315
   Name: "Do Not Enter Hologram Mat"
   PlatformAssetType: 13
-  SerializationVersion: 118
+  SerializationVersion: 119
   CustomMaterialAsset {
     BaseMaterialId: 5993887030996483998
     ParameterOverrides {

@@ -1075,7 +1075,7 @@ Assets {
         Transform {
           Location {
             X: 16.887085
-            Y: 3.81445313
+            Y: 3.81445312
             Z: -143.749512
           }
           Rotation {
@@ -1569,6 +1569,9 @@ Assets {
           }
           ShadowBias: 0.4
           ShadowSlopeBias: 0.6
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:critical"
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
@@ -2772,7 +2775,7 @@ Assets {
           Location {
             X: -9585.58
             Y: 2992.56592
-            Z: 159.539063
+            Z: 159.539062
           }
           Rotation {
             Yaw: -64.5259628
@@ -3562,7 +3565,7 @@ Assets {
         Transform {
           Location {
             X: 3.39605713
-            Y: 70.2382813
+            Y: 70.2382812
             Z: 104.020996
           }
           Rotation {
@@ -3647,7 +3650,7 @@ Assets {
         Transform {
           Location {
             X: -13.7456665
-            Y: 73.0976563
+            Y: 73.0976562
             Z: 107.144043
           }
           Rotation {
@@ -3931,6 +3934,9 @@ Assets {
           ShadowBias: 0.4
           ShadowSlopeBias: 0.6
         }
+        Relevance {
+          Value: "mc:eproxyrelevance:critical"
+        }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
@@ -4175,5 +4181,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 118
+  SerializationVersion: 119
 }

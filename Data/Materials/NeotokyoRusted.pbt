@@ -2,7 +2,7 @@ Assets {
   Id: 10452419208252756493
   Name: "NeotokyoRusted"
   PlatformAssetType: 13
-  SerializationVersion: 118
+  SerializationVersion: 119
   CustomMaterialAsset {
     BaseMaterialId: 3722419759708884904
     ParameterOverrides {

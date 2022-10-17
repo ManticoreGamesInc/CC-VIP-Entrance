@@ -2,7 +2,7 @@ Assets {
   Id: 8246763549482609846
   Name: "Neotokyo Bricks Multicolor"
   PlatformAssetType: 13
-  SerializationVersion: 118
+  SerializationVersion: 119
   CustomMaterialAsset {
     BaseMaterialId: 4982344512741985097
     ParameterOverrides {
