@@ -7,5 +7,6 @@ Assets {
     }
   }
   SerializationVersion: 119
+  DirectlyPublished: true
   VirtualFolderPath: "VIP Entrance"
 }

@@ -17,7 +17,6 @@ Assets {
         }
         ParentId: 4781671109827199097
         ChildIds: 8661296943313653245
-        ChildIds: 12133808726885784538
         ChildIds: 9931740954974627229
         ChildIds: 16747694811091594145
         ChildIds: 5338148322908460510
@@ -96,42 +95,6 @@ Assets {
           Value: "mc:eproxyrelevance:critical"
         }
         IsReplicationEnabledByDefault: true
-      }
-      Objects {
-        Id: 12133808726885784538
-        Name: "ChangeTeamDebug"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 17167113276012700361
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Script {
-          ScriptAsset {
-            Id: 12333658006900261655
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
       }
       Objects {
         Id: 9931740954974627229
@@ -1075,7 +1038,7 @@ Assets {
         Transform {
           Location {
             X: 16.887085
-            Y: 3.81445312
+            Y: 3.81445313
             Z: -143.749512
           }
           Rotation {
@@ -2775,7 +2738,7 @@ Assets {
           Location {
             X: -9585.58
             Y: 2992.56592
-            Z: 159.539062
+            Z: 159.539063
           }
           Rotation {
             Yaw: -64.5259628
@@ -3565,7 +3528,7 @@ Assets {
         Transform {
           Location {
             X: 3.39605713
-            Y: 70.2382812
+            Y: 70.2382813
             Z: 104.020996
           }
           Rotation {
@@ -3650,7 +3613,7 @@ Assets {
         Transform {
           Location {
             X: -13.7456665
-            Y: 73.0976562
+            Y: 73.0976563
             Z: 107.144043
           }
           Rotation {
@@ -4182,4 +4145,5 @@ Assets {
     }
   }
   SerializationVersion: 119
+  DirectlyPublished: true
 }

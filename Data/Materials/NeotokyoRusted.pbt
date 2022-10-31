@@ -3,6 +3,7 @@ Assets {
   Name: "NeotokyoRusted"
   PlatformAssetType: 13
   SerializationVersion: 119
+  DirectlyPublished: true
   CustomMaterialAsset {
     BaseMaterialId: 3722419759708884904
     ParameterOverrides {

@@ -1,12 +1,12 @@
 Assets {
-  Id: 10108469688609506879
+  Id: 71307553403491753
   Name: "VIP Entrance"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 14028214707477011275
+      RootId: 3942879567818966039
       Objects {
-        Id: 14028214707477011275
+        Id: 3942879567818966039
         Name: "TemplateBundleDummy"
         Transform {
           Location {
@@ -22,116 +22,25 @@ Assets {
         Folder {
           BundleDummy {
             ReferencedAssets {
-              Id: 12333658006900261655
-            }
-            ReferencedAssets {
-              Id: 736360303936294653
-            }
-            ReferencedAssets {
-              Id: 11486163764575026315
-            }
-            ReferencedAssets {
-              Id: 16035118790854660264
-            }
-            ReferencedAssets {
-              Id: 8246763549482609846
-            }
-            ReferencedAssets {
-              Id: 10452419208252756493
-            }
-            ReferencedAssets {
-              Id: 7438148288150297193
-            }
-            ReferencedAssets {
-              Id: 2987342886805423931
-            }
-            ReferencedAssets {
               Id: 11446616574055698523
-            }
-            ReferencedAssets {
-              Id: 17571017394597331498
             }
             ReferencedAssets {
               Id: 3548227754366110721
             }
-            ReferencedAssets {
-              Id: 6527240361024916247
-            }
           }
         }
       }
-    }
-    Assets {
-      Id: 6527240361024916247
-      Name: "VIPLearnMoreDialog"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "\r\nlocal TRIGGER = script:GetCustomProperty(\"Trigger\"):WaitForObject()\r\nlocal OUTSIDE_TRIGGER = script:GetCustomProperty(\"OutsideTrigger\"):WaitForObject()\r\nlocal MODAL = script:GetCustomProperty(\"ModalPopup\"):WaitForObject()\r\nMODAL = MODAL.context\r\n\r\nlocal TRIGGER_COOLDOWN = 0.65\r\n\r\nTRIGGER.interactedEvent:Connect(function()\r\n\tTRIGGER.collision = Collision.FORCE_OFF\r\n\tMODAL.Show()\r\nend)\r\n\r\nOUTSIDE_TRIGGER.endOverlapEvent:Connect(function(_, obj)\r\n\tif obj == Game.GetLocalPlayer() then\r\n\t\tMODAL.Hide()\r\n\tend\r\nend)\r\n\r\nfunction OnModalHidden(modal)\r\n\tif modal == MODAL then\r\n\t\tTask.Wait(TRIGGER_COOLDOWN)\r\n\t\tTRIGGER.collision = Collision.INHERIT\r\n\tend\r\nend\r\n\r\nEvents.Connect(\"ModalHidden\", OnModalHidden)"
-        CustomParameters {
-          Overrides {
-            Name: "cs:Trigger"
-            ObjectReference {
-            }
-          }
-          Overrides {
-            Name: "cs:OutsideTrigger"
-            ObjectReference {
-            }
-          }
-          Overrides {
-            Name: "cs:ModalPopup"
-            ObjectReference {
-            }
-          }
-        }
-      }
-      VirtualFolderPath: "VIP Entrance"
     }
     Assets {
       Id: 3548227754366110721
       Name: "VIPEntrance_README"
       PlatformAssetType: 3
       TextAsset {
-        Text: "--[[\r\n\r\n __      _______ _____    ______       _                            \r\n \\ \\    / /_   _|  __ \\  |  ____|     | |                           \r\n  \\ \\  / /  | | | |__) | | |__   _ __ | |_ _ __ __ _ _ __   ___ ___ \r\n   \\ \\/ /   | | |  ___/  |  __| | \'_ \\| __| \'__/ _` | \'_ \\ / __/ _ \\\r\n    \\  /   _| |_| |      | |____| | | | |_| | | (_| | | | | (_|  __/\r\n     \\/   |_____|_|      |______|_| |_|\\__|_|  \\__,_|_| |_|\\___\\___|\r\n                                                                    \r\n                                                                    \r\nVIP Entrance is a component that restrict users from a certain team from entering.\r\n\r\nThe template assigns a team as \"VIP\" and only users on the VIP team can enter.\r\nIt uses team-collision property to restrict users on a certain team. The entrance can temporarily be\r\nopened for all users by a user on the VIP team pressing a button.\r\n\r\n=====\r\nSetup\r\n=====\r\n\r\nDrag and drop the VIP Entrance template into the Hierarchy.\r\n\r\nPreview the Project. Test the entrance and switch between team 1 and 2 using the `1` and `2` key.\r\n\r\nEdit the `Learn More Dialog` UI Container for instructions on how to become a VIP.\r\n\r\nRemove the `ChangeTeamDebug` script once the project is ready to publish.\r\n\r\n==========\r\nHow to Use\r\n==========\r\n\r\nThe root object of this template has two custom properties.\r\n\r\n- VIP Team\r\n\r\nThis team number will represent the VIP team. Users on this team will be allowed access through the entrance.\r\n\r\n- Duration Open\r\n\r\nThis is the number of seconds the VIP Entrance will temporarily be opened to all users.\r\nThis is activated by a VIP pressing the button on the inner side of the entrance.\r\n\r\n]]--"
+        Text: "--[[\r\n\r\n __      _______ _____    ______       _                            \r\n \\ \\    / /_   _|  __ \\  |  ____|     | |                           \r\n  \\ \\  / /  | | | |__) | | |__   _ __ | |_ _ __ __ _ _ __   ___ ___ \r\n   \\ \\/ /   | | |  ___/  |  __| | \'_ \\| __| \'__/ _` | \'_ \\ / __/ _ \\\r\n    \\  /   _| |_| |      | |____| | | | |_| | | (_| | | | | (_|  __/\r\n     \\/   |_____|_|      |______|_| |_|\\__|_|  \\__,_|_| |_|\\___\\___|\r\n                                                                    \r\n                                                                    \r\nVIP Entrance is a component that restrict users from a certain team from entering.\r\n\r\nThe template assigns a team as VIP and only users on the VIP team can enter.\r\nIt uses team-collision property to restrict users on a certain team. The entrance can temporarily be\r\nopened for all users by a user on the VIP team pressing a button.\r\n\r\nThis component works in conjuction with the VIP Team Selection component.\r\nSee more info here: https://learn.coregames.com/vip-team-selection/1\r\n\r\n=====\r\nSetup\r\n=====\r\n\r\n1. Drag and drop the VIP Entrance template into the Hierarchy.\r\n2. Preview the Project. The door should be passable/openable based on the player\'s team.\r\n3. Edit the `Learn More Dialog` UI Container for instructions on how to become a VIP.\r\n\r\n==========\r\nHow to Use\r\n==========\r\n\r\nThe root object of this template has two custom properties.\r\n\r\n- VIP Team\r\n\r\nThis team number will represent the VIP team. Users on this team will be allowed access through the entrance.\r\n\r\n- Duration Open\r\n\r\nThis is the number of seconds the VIP Entrance will temporarily be opened to all users.\r\nThis is activated by a VIP pressing the button on the inner side of the entrance.\r\n\r\n]]--"
         CustomParameters {
         }
       }
-      VirtualFolderPath: "VIP Entrance"
-    }
-    Assets {
-      Id: 17571017394597331498
-      Name: "VIPBarrierVisibility"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "\r\nlocal NETWORKED_COLLIDER = script:GetCustomProperty(\"NetworkedCollider\"):WaitForObject()\r\nlocal MESSAGE = script:GetCustomProperty(\"Message\"):WaitForObject()\r\nlocal TRIM_NEGATIVE = script:GetCustomProperty(\"TrimNegative\"):WaitForObject()\r\nlocal TRIM_POSITIVE = script:GetCustomProperty(\"TrimPositive\"):WaitForObject()\r\nlocal LEARN_MORE_DIALOG = script:GetCustomProperty(\"LearnMoreDialog\"):WaitForObject()\r\n\r\nlocal player = Game.GetLocalPlayer()\r\n\r\nfunction Tick()\r\n\tlocal isColliding = NETWORKED_COLLIDER.collision ~= Collision.FORCE_OFF\r\n\tlocal isPlayerAllowed = player.team ~= NETWORKED_COLLIDER.team\r\n\t\r\n\tif isColliding and not isPlayerAllowed then\r\n\t\tMESSAGE.visibility = Visibility.INHERIT\r\n\t\tLEARN_MORE_DIALOG.collision = Collision.FORCE_ON\r\n\telse\r\n\t\tMESSAGE.visibility = Visibility.FORCE_OFF\r\n\t\tLEARN_MORE_DIALOG.collision = Collision.FORCE_OFF\r\n\tend\r\n\t\r\n\tif isColliding then\r\n\t\tif isPlayerAllowed then\r\n\t\t\tTRIM_NEGATIVE.visibility = Visibility.FORCE_OFF\r\n\t\t\tTRIM_POSITIVE.visibility = Visibility.INHERIT\r\n\t\telse\r\n\t\t\tTRIM_NEGATIVE.visibility = Visibility.INHERIT\r\n\t\t\tTRIM_POSITIVE.visibility = Visibility.FORCE_OFF\r\n\t\tend\r\n\telse\r\n\t\tTRIM_NEGATIVE.visibility = Visibility.FORCE_OFF\r\n\t\tTRIM_POSITIVE.visibility = Visibility.FORCE_OFF\r\n\tend\r\n\t\r\n\tTask.Wait(0.3)\r\nend\r\n\r\n"
-        CustomParameters {
-          Overrides {
-            Name: "cs:NetworkedCollider"
-            ObjectReference {
-            }
-          }
-          Overrides {
-            Name: "cs:Message"
-            ObjectReference {
-            }
-          }
-          Overrides {
-            Name: "cs:TrimNegative"
-            ObjectReference {
-            }
-          }
-          Overrides {
-            Name: "cs:TrimPositive"
-            ObjectReference {
-            }
-          }
-          Overrides {
-            Name: "cs:LearnMoreDialog"
-            ObjectReference {
-            }
-          }
-        }
-      }
+      DirectlyPublished: true
       VirtualFolderPath: "VIP Entrance"
     }
     Assets {
@@ -153,7 +62,6 @@ Assets {
             }
             ParentId: 4781671109827199097
             ChildIds: 8661296943313653245
-            ChildIds: 12133808726885784538
             ChildIds: 9931740954974627229
             ChildIds: 16747694811091594145
             ChildIds: 5338148322908460510
@@ -232,42 +140,6 @@ Assets {
               Value: "mc:eproxyrelevance:critical"
             }
             IsReplicationEnabledByDefault: true
-          }
-          Objects {
-            Id: 12133808726885784538
-            Name: "ChangeTeamDebug"
-            Transform {
-              Location {
-              }
-              Rotation {
-              }
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 17167113276012700361
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            Script {
-              ScriptAsset {
-                Id: 12333658006900261655
-              }
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
           }
           Objects {
             Id: 9931740954974627229
@@ -1211,7 +1083,7 @@ Assets {
             Transform {
               Location {
                 X: 16.887085
-                Y: 3.81445312
+                Y: 3.81445313
                 Z: -143.749512
               }
               Rotation {
@@ -2911,7 +2783,7 @@ Assets {
               Location {
                 X: -9585.58
                 Y: 2992.56592
-                Z: 159.539062
+                Z: 159.539063
               }
               Rotation {
                 Yaw: -64.5259628
@@ -3701,7 +3573,7 @@ Assets {
             Transform {
               Location {
                 X: 3.39605713
-                Y: 70.2382812
+                Y: 70.2382813
                 Z: 104.020996
               }
               Rotation {
@@ -3786,7 +3658,7 @@ Assets {
             Transform {
               Location {
                 X: -13.7456665
-                Y: 73.0976562
+                Y: 73.0976563
                 Z: 107.144043
               }
               Rotation {
@@ -4083,6 +3955,7 @@ Assets {
           AssetId: "None"
         }
       }
+      DirectlyPublished: true
     }
     Assets {
       Id: 18394935990885869118
@@ -4102,6 +3975,7 @@ Assets {
         CustomParameters {
         }
       }
+      DirectlyPublished: true
       VirtualFolderPath: "VIP Entrance"
     }
     Assets {
@@ -4167,6 +4041,7 @@ Assets {
         CustomParameters {
         }
       }
+      DirectlyPublished: true
       VirtualFolderPath: "VIP Entrance"
     }
     Assets {
@@ -4345,6 +4220,34 @@ Assets {
           }
         }
       }
+      DirectlyPublished: true
+      VirtualFolderPath: "VIP Entrance"
+    }
+    Assets {
+      Id: 6527240361024916247
+      Name: "VIPLearnMoreDialog"
+      PlatformAssetType: 3
+      TextAsset {
+        Text: "\r\nlocal TRIGGER = script:GetCustomProperty(\"Trigger\"):WaitForObject()\r\nlocal OUTSIDE_TRIGGER = script:GetCustomProperty(\"OutsideTrigger\"):WaitForObject()\r\nlocal MODAL = script:GetCustomProperty(\"ModalPopup\"):WaitForObject()\r\nMODAL = MODAL.context\r\n\r\nlocal TRIGGER_COOLDOWN = 0.65\r\n\r\nTRIGGER.interactedEvent:Connect(function()\r\n\tTRIGGER.collision = Collision.FORCE_OFF\r\n\tMODAL.Show()\r\nend)\r\n\r\nOUTSIDE_TRIGGER.endOverlapEvent:Connect(function(_, obj)\r\n\tif obj == Game.GetLocalPlayer() then\r\n\t\tMODAL.Hide()\r\n\tend\r\nend)\r\n\r\nfunction OnModalHidden(modal)\r\n\tif modal == MODAL then\r\n\t\tTask.Wait(TRIGGER_COOLDOWN)\r\n\t\tTRIGGER.collision = Collision.INHERIT\r\n\tend\r\nend\r\n\r\nEvents.Connect(\"ModalHidden\", OnModalHidden)"
+        CustomParameters {
+          Overrides {
+            Name: "cs:Trigger"
+            ObjectReference {
+            }
+          }
+          Overrides {
+            Name: "cs:OutsideTrigger"
+            ObjectReference {
+            }
+          }
+          Overrides {
+            Name: "cs:ModalPopup"
+            ObjectReference {
+            }
+          }
+        }
+      }
+      DirectlyPublished: true
       VirtualFolderPath: "VIP Entrance"
     }
     Assets {
@@ -4432,6 +4335,7 @@ Assets {
       Id: 11486163764575026315
       Name: "Do Not Enter Hologram Mat"
       PlatformAssetType: 13
+      DirectlyPublished: true
       CustomMaterialAsset {
         BaseMaterialId: 5993887030996483998
         ParameterOverrides {
@@ -4510,6 +4414,43 @@ Assets {
       }
     }
     Assets {
+      Id: 17571017394597331498
+      Name: "VIPBarrierVisibility"
+      PlatformAssetType: 3
+      TextAsset {
+        Text: "\r\nlocal NETWORKED_COLLIDER = script:GetCustomProperty(\"NetworkedCollider\"):WaitForObject()\r\nlocal MESSAGE = script:GetCustomProperty(\"Message\"):WaitForObject()\r\nlocal TRIM_NEGATIVE = script:GetCustomProperty(\"TrimNegative\"):WaitForObject()\r\nlocal TRIM_POSITIVE = script:GetCustomProperty(\"TrimPositive\"):WaitForObject()\r\nlocal LEARN_MORE_DIALOG = script:GetCustomProperty(\"LearnMoreDialog\"):WaitForObject()\r\n\r\nlocal player = Game.GetLocalPlayer()\r\n\r\nfunction Tick()\r\n\tlocal isColliding = NETWORKED_COLLIDER.collision ~= Collision.FORCE_OFF\r\n\tlocal isPlayerAllowed = player.team ~= NETWORKED_COLLIDER.team\r\n\t\r\n\tif isColliding and not isPlayerAllowed then\r\n\t\tMESSAGE.visibility = Visibility.INHERIT\r\n\t\tLEARN_MORE_DIALOG.collision = Collision.FORCE_ON\r\n\telse\r\n\t\tMESSAGE.visibility = Visibility.FORCE_OFF\r\n\t\tLEARN_MORE_DIALOG.collision = Collision.FORCE_OFF\r\n\tend\r\n\t\r\n\tif isColliding then\r\n\t\tif isPlayerAllowed then\r\n\t\t\tTRIM_NEGATIVE.visibility = Visibility.FORCE_OFF\r\n\t\t\tTRIM_POSITIVE.visibility = Visibility.INHERIT\r\n\t\telse\r\n\t\t\tTRIM_NEGATIVE.visibility = Visibility.INHERIT\r\n\t\t\tTRIM_POSITIVE.visibility = Visibility.FORCE_OFF\r\n\t\tend\r\n\telse\r\n\t\tTRIM_NEGATIVE.visibility = Visibility.FORCE_OFF\r\n\t\tTRIM_POSITIVE.visibility = Visibility.FORCE_OFF\r\n\tend\r\n\t\r\n\tTask.Wait(0.3)\r\nend\r\n\r\n"
+        CustomParameters {
+          Overrides {
+            Name: "cs:NetworkedCollider"
+            ObjectReference {
+            }
+          }
+          Overrides {
+            Name: "cs:Message"
+            ObjectReference {
+            }
+          }
+          Overrides {
+            Name: "cs:TrimNegative"
+            ObjectReference {
+            }
+          }
+          Overrides {
+            Name: "cs:TrimPositive"
+            ObjectReference {
+            }
+          }
+          Overrides {
+            Name: "cs:LearnMoreDialog"
+            ObjectReference {
+            }
+          }
+        }
+      }
+      DirectlyPublished: true
+      VirtualFolderPath: "VIP Entrance"
+    }
+    Assets {
       Id: 16048367406070731799
       Name: "Plane 1m - One Sided"
       PlatformAssetType: 1
@@ -4522,6 +4463,7 @@ Assets {
       Id: 10452419208252756493
       Name: "NeotokyoRusted"
       PlatformAssetType: 13
+      DirectlyPublished: true
       CustomMaterialAsset {
         BaseMaterialId: 3722419759708884904
         ParameterOverrides {
@@ -4576,6 +4518,7 @@ Assets {
       Id: 8246763549482609846
       Name: "Neotokyo Bricks Multicolor"
       PlatformAssetType: 13
+      DirectlyPublished: true
       CustomMaterialAsset {
         BaseMaterialId: 4982344512741985097
         ParameterOverrides {
@@ -4625,635 +4568,13 @@ Assets {
         AssetId: "sm_ts_scf_base_wall_int_001_door_01_ref"
       }
     }
-    Assets {
-      Id: 12333658006900261655
-      Name: "ChangeTeamDebug"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "warn(\"This script allows users to switch teams using the `1` and `2` key for debugging. Should be removed before publishing\")\r\n\r\nfunction OnBindingPressed(player, action)\r\n\tif action == \"ability_extra_1\" then\r\n\t\tplayer.team = 1\r\n\t\t\r\n\telseif action == \"ability_extra_2\" then\r\n\t\tplayer.team = 2\r\n\tend\r\nend\r\n\r\nGame.playerJoinedEvent:Connect(function(player)\r\n\tplayer.bindingPressedEvent:Connect(OnBindingPressed)\r\nend)\r\n\r\n"
-        CustomParameters {
-        }
-      }
-      VirtualFolderPath: "VIP Entrance"
-    }
-    Assets {
-      Id: 736360303936294653
-      Name: "Default Bindings"
-      PlatformAssetType: 29
-      BindingSetAsset {
-        Bindings {
-          BindingType {
-            Value: "mc:ebindingtype:basic"
-          }
-          BasicBindingData {
-            BasicInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:spacebar"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:a"
-              }
-            }
-          }
-          Action: "Jump"
-          Description: "Make the character jump."
-          CoreBehavior {
-            Value: "mc:ecorebehavior:jump"
-          }
-          IsEnabledOnStart: true
-        }
-        Bindings {
-          BindingType {
-            Value: "mc:ebindingtype:basic"
-          }
-          BasicBindingData {
-            BasicInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:leftcontrol"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:c"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:b"
-              }
-            }
-          }
-          Action: "Crouch"
-          Description: "Enter crouch mode."
-          CoreBehavior {
-            Value: "mc:ecorebehavior:crouch"
-          }
-          IsEnabledOnStart: true
-        }
-        Bindings {
-          BindingType {
-            Value: "mc:ebindingtype:basic"
-          }
-          BasicBindingData {
-            BasicInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:g"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:dpadup"
-              }
-            }
-          }
-          Action: "Mount"
-          Description: "Enter mount mode."
-          CoreBehavior {
-            Value: "mc:ecorebehavior:mount"
-          }
-          IsEnabledOnStart: true
-        }
-        Bindings {
-          BindingType {
-            Value: "mc:ebindingtype:basic"
-          }
-          BasicBindingData {
-            BasicInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:f"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:x"
-              }
-            }
-          }
-          Action: "Interact"
-          Description: "Interact with triggers."
-          CoreBehavior {
-            Value: "mc:ecorebehavior:interact"
-          }
-          IsEnabledOnStart: true
-        }
-        Bindings {
-          BindingType {
-            Value: "mc:ebindingtype:basic"
-          }
-          BasicBindingData {
-            BasicInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:enter"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:none"
-              }
-            }
-          }
-          Action: "Chat"
-          Description: "Opens chat dialog and social menu."
-          CoreBehavior {
-            Value: "mc:ecorebehavior:chat"
-          }
-          IsEnabledOnStart: true
-        }
-        Bindings {
-          BindingType {
-            Value: "mc:ebindingtype:basic"
-          }
-          BasicBindingData {
-            BasicInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:tilde"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:middleclick"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:view"
-              }
-            }
-          }
-          Action: "Slot Picker"
-          Description: "Reopens last opened picker menu."
-          CoreBehavior {
-            Value: "mc:ecorebehavior:slotpicker"
-          }
-          IsEnabledOnStart: true
-        }
-        Bindings {
-          BindingType {
-            Value: "mc:ebindingtype:directional"
-          }
-          DirectionalBindingData {
-            UpInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:w"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:leftstickup"
-              }
-            }
-            LeftInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:a"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:leftstickleft"
-              }
-            }
-            DownInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:s"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:leftstickdown"
-              }
-            }
-            RightInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:d"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:leftstickright"
-              }
-            }
-          }
-          Action: "Move"
-          Description: "Moves the character."
-          CoreBehavior {
-            Value: "mc:ecorebehavior:move"
-          }
-          IsEnabledOnStart: true
-        }
-        Bindings {
-          BindingType {
-            Value: "mc:ebindingtype:axis"
-          }
-          AxisBindingData {
-            IncreaseInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:spacebar"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:a"
-              }
-            }
-            DecreaseInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:leftcontrol"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:c"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:b"
-              }
-            }
-          }
-          Action: "Move Vertically"
-          Description: "Fly or swim vertically up and down."
-          CoreBehavior {
-            Value: "mc:ecorebehavior:movevertically"
-          }
-          IsEnabledOnStart: true
-        }
-        Bindings {
-          BindingType {
-            Value: "mc:ebindingtype:directional"
-          }
-          DirectionalBindingData {
-            UpInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:mouseup"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:rightstickup"
-              }
-            }
-            LeftInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:mouseleft"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:rightstickleft"
-              }
-            }
-            DownInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:mousedown"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:rightstickdown"
-              }
-            }
-            RightInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:mouseright"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:rightstickright"
-              }
-            }
-          }
-          Action: "Look"
-          Description: "Controls the camera."
-          CoreBehavior {
-            Value: "mc:ecorebehavior:look"
-          }
-          IsEnabledOnStart: true
-        }
-        Bindings {
-          BindingType {
-            Value: "mc:ebindingtype:axis"
-          }
-          AxisBindingData {
-            IncreaseInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:scrolldown"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:rightbumper"
-              }
-            }
-            DecreaseInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:scrollup"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:leftbumper"
-              }
-            }
-          }
-          Action: "Zoom"
-          Description: "Zoom in or out with the camera."
-          CoreBehavior {
-            Value: "mc:ecorebehavior:zoom"
-          }
-          IsEnabledOnStart: true
-        }
-        Bindings {
-          BindingType {
-            Value: "mc:ebindingtype:basic"
-          }
-          BasicBindingData {
-            BasicInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:leftalt"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:none"
-              }
-            }
-          }
-          Action: "Push-to-Talk"
-          Description: "Toggle voice chat mode."
-          CoreBehavior {
-            Value: "mc:ecorebehavior:pushtotalk"
-          }
-          IsEnabledOnStart: true
-        }
-        Bindings {
-          BindingType {
-            Value: "mc:ebindingtype:basic"
-          }
-          BasicBindingData {
-            BasicInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:leftclick"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:righttrigger"
-              }
-            }
-          }
-          Action: "Shoot"
-          Description: "Shoot ability of weapon or equipment."
-          CoreBehavior {
-            Value: "mc:ecorebehavior:weapon"
-          }
-          IsEnabledOnStart: true
-        }
-        Bindings {
-          BindingType {
-            Value: "mc:ebindingtype:basic"
-          }
-          BasicBindingData {
-            BasicInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:rightclick"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:lefttrigger"
-              }
-            }
-          }
-          Action: "Aim"
-          Description: "Weapon or equipment aiming."
-          CoreBehavior {
-            Value: "mc:ecorebehavior:weapon"
-          }
-          Networked: true
-          IsEnabledOnStart: true
-        }
-        Bindings {
-          BindingType {
-            Value: "mc:ebindingtype:basic"
-          }
-          BasicBindingData {
-            BasicInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:r"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:y"
-              }
-            }
-          }
-          Action: "Reload"
-          Description: "Reload ability on weapons."
-          CoreBehavior {
-            Value: "mc:ecorebehavior:weapon"
-          }
-          IsEnabledOnStart: true
-        }
-        Bindings {
-          BindingType {
-            Value: "mc:ebindingtype:basic"
-          }
-          BasicBindingData {
-            BasicInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:leftclick"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:x"
-              }
-            }
-          }
-          Action: "Attack"
-          Description: "Attack ability for melee weapons or equipment."
-          CoreBehavior {
-            Value: "mc:ecorebehavior:equipment"
-          }
-          IsEnabledOnStart: true
-        }
-        Bindings {
-          BindingType {
-            Value: "mc:ebindingtype:basic"
-          }
-          BasicBindingData {
-            BasicInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:w"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:righttrigger"
-              }
-            }
-          }
-          Action: "Vehicle Accelerate"
-          Description: "When driving, accelerate forward."
-          CoreBehavior {
-            Value: "mc:ecorebehavior:vehicleaccelerate"
-          }
-          IsEnabledOnStart: true
-        }
-        Bindings {
-          BindingType {
-            Value: "mc:ebindingtype:basic"
-          }
-          BasicBindingData {
-            BasicInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:s"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:lefttrigger"
-              }
-            }
-          }
-          Action: "Vehicle Reverse"
-          Description: "When driving, stop the vehicle and reverse."
-          CoreBehavior {
-            Value: "mc:ecorebehavior:vehiclereverse"
-          }
-          IsEnabledOnStart: true
-        }
-        Bindings {
-          BindingType {
-            Value: "mc:ebindingtype:axis"
-          }
-          AxisBindingData {
-            IncreaseInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:d"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:leftstickright"
-              }
-            }
-            DecreaseInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:a"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:leftstickleft"
-              }
-            }
-          }
-          Action: "Vehicle Turn"
-          Description: "When driving, turn the vehicle."
-          CoreBehavior {
-            Value: "mc:ecorebehavior:vehicleturn"
-          }
-          IsEnabledOnStart: true
-        }
-        Bindings {
-          BindingType {
-            Value: "mc:ebindingtype:basic"
-          }
-          BasicBindingData {
-            BasicInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:spacebar"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:b"
-              }
-            }
-          }
-          Action: "Vehicle Handbrake"
-          Description: "When driving, apply the handbrake."
-          CoreBehavior {
-            Value: "mc:ecorebehavior:vehiclehandbrake"
-          }
-          IsEnabledOnStart: true
-        }
-        Bindings {
-          BindingType {
-            Value: "mc:ebindingtype:basic"
-          }
-          BasicBindingData {
-            BasicInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:leftclick"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:a"
-              }
-            }
-          }
-          Action: "Vehicle Shoot"
-          Description: "Shoot ability on vehicle."
-          CoreBehavior {
-            Value: "mc:ecorebehavior:vehicle"
-          }
-          IsEnabledOnStart: true
-        }
-        Bindings {
-          BindingType {
-            Value: "mc:ebindingtype:basic"
-          }
-          BasicBindingData {
-            BasicInputs {
-              KeyboardPrimary {
-                Value: "mc:ebindingkeyboard:f"
-              }
-              KeyboardSecondary {
-                Value: "mc:ebindingkeyboard:none"
-              }
-              Controller {
-                Value: "mc:ebindinggamepad:x"
-              }
-            }
-          }
-          Action: "Vehicle Exit"
-          Description: "When driving, exit the vehicle."
-          CoreBehavior {
-            Value: "mc:ecorebehavior:vehicleexit"
-          }
-          IsEnabledOnStart: true
-        }
-      }
-    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
   Marketplace {
-    Id: "a8c44bf3c60943b2b455224aa87cb5ce"
+    Id: "4aad5334eb7746258225c9202b89f9da"
     OwnerAccountId: "bd602d5201b04b3fbf7be10f59c8f974"
     OwnerName: "CoreAcademy"
   }
