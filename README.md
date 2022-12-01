@@ -5,7 +5,7 @@
 [![Build Status](https://github.com/ManticoreGamesInc/CC-VIP-Entrance/workflows/CI/badge.svg)](https://github.com/ManticoreGamesInc/CC-VIP-Entrance/actions/workflows/ci.yml?query=workflow%3ACI%29)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/ManticoreGamesInc/CC-VIP-Entrance?style=plastic)
 
-![TitleCard](/Screenshots/vipentrance.png)
+![TitleCard](/Screenshots/Main.png)
 
 </div>
 
